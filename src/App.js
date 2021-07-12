@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// Required Packages
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+// Custom Pages
+import Joker from './pages/Joker'
+import Darkknight from './pages/Darkknight'
+import SuicideSquad from './pages/SuicideSquad'
+import TimBurton from './pages/TimBurton'
+import ErrorPage from './pages/ErrorPage'
+// CSS
+import './styles/style.scss';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/suicidesquad'component={SuicideSquad} />
+        <Route exact path='/darkknight'component={Darkknight} />
+        <Route exact path='/timburton' component={TimBurton} />
+        <Route exact path='/' component={Joker} />
+        <Route component={ErrorPage} />
+      </Switch>
+    </Router>
   );
 }
 
