@@ -1,6 +1,6 @@
 # Joker Movie Trailer
 
-Storybook - WIP
+Storybook - DONE
 Unit Testing - WIP
 Props validation - DONE
 Comments - DONE
