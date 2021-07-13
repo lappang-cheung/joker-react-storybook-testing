@@ -51,7 +51,12 @@ const Banner = (props) => {
                     </span>
                     <div className={`slide slide_${getBanner()}`} />
                     <ul className="sci">
-                        <li><a href="#"><img src={Facebook} alt="facebook"/></a></li>
+                        <li>
+                            <a href={`http://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+                                target="_blank">
+                                <img src={Facebook} alt="facebook"/>
+                            </a>
+                        </li>
                         <li><a href="#"><img src={Twitter} alt="twitter"/></a></li>
                         <li><a href="#"><img src={Instagram} alt="instagram"/></a></li>
                     </ul>
