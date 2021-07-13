@@ -16,4 +16,3 @@ TrailerComponent.args = {
     setTrailerToggle: () => false,
     movieTrailer: 'https://www.youtube.com/embed/ftNOhfNjXjk',
 };
-
