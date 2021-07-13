@@ -1,15 +1,17 @@
+// Required packages
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useLocation } from 'react-router-dom'
-
+// Custom component
 import Trailer from '../Trailer/Trailer'
-
+// Custom image imports
 import Play from '../../images/play.png'
 import Facebook from '../../images/facebook.png'
 import Twitter from '../../images/twitter.png'
 import Instagram from '../../images/instagram.png'
 
 const Banner = (props) => {
-
+    // Props
     const { 
         trailerToggle, 
         setTrailerToggle, 
@@ -18,8 +20,10 @@ const Banner = (props) => {
         bannerDescription
     } = props
 
+    // Initial location of URL
     const location = useLocation()
 
+    // Figure out the banner
     const getBanner = () => {
         switch(location.pathname) {
             case '/suicidesquad':
@@ -47,9 +51,9 @@ const Banner = (props) => {
                     </span>
                     <div className={`slide slide_${getBanner()}`} />
                     <ul className="sci">
-                        <li><a href="#"><img src={Facebook}/></a></li>
-                        <li><a href="#"><img src={Twitter}/></a></li>
-                        <li><a href="#"><img src={Instagram}/></a></li>
+                        <li><a href="#"><img src={Facebook} alt="facebook"/></a></li>
+                        <li><a href="#"><img src={Twitter} alt="twitter"/></a></li>
+                        <li><a href="#"><img src={Instagram} alt="instagram"/></a></li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +62,15 @@ const Banner = (props) => {
             movieTrailer={movieTrailer}/>
         </>
     )
+}
+
+// Prop validation
+Banner.propTypes = {
+    trailerToggle: PropTypes.bool.isRequired, 
+    setTrailerToggle: PropTypes.func.isRequired, 
+    movieTrailer: PropTypes.string.isRequired, 
+    bannerTitle: PropTypes.string.isRequired, 
+    bannerDescription: PropTypes.string.isRequired
 }
 
 export default Banner

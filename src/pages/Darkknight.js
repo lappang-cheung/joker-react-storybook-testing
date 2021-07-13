@@ -1,11 +1,13 @@
+// Required packages
 import React, {useState} from 'react'
-
+// Custom components
 import Layout from '../components/Layouts/Layout'
 import Banner from '../components/Banner/Banner'
 
 const Darkknight = () => {
-
+    // State for trailer toggle
     const [trailerToggle, setTrailerToggle] = useState(false)
+    // Data
     const title="Now I'm <span>Always</span> Smiling!"
     const desciption="\"Come here. Hey! Look at me. So I had a wife, beautiful, like you, who tells me I worry too much. " + 
     "Who tells me I ought to smile more. Who gambles and gets in deep with the sharks…look at me! " + 
