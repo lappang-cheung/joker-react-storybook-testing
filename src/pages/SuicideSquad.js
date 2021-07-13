@@ -6,12 +6,21 @@ import Banner from '../components/Banner/Banner'
 const SuicideSquad = () => {
 
     const [trailerToggle, setTrailerToggle] = useState(false)
+    const title="Don't say <span>this oath...</span> thoughtlessly"
+    const desciption="\"Question...would you die for me? That's too easy." + 
+    "Would you...would you live for me? Hmmm? Careful...do " +
+    "not say this oath...thoughtlessly. Desire becomes " +
+    "surrender, surrender becomes power. You want this? " +
+    "Say, say it, say it, pretty, pretty, pretty, pretty..." + 
+    "please.\""
 
     return (
         <Layout>
             <Banner trailerToggle={trailerToggle} 
                     setTrailerToggle={setTrailerToggle}
-                    movieTrailer="https://www.youtube.com/embed/OLBWeWSjECQ"/>
+                    movieTrailer="https://www.youtube.com/embed/OLBWeWSjECQ"
+                    bannerTitle={title}
+                    bannerDescription={desciption}/>
         </Layout>
     )
 }
