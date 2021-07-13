@@ -1,7 +1,7 @@
 // Required packages
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 // Custom component
 import Trailer from '../Trailer/Trailer'
 // Custom image imports
@@ -21,11 +21,11 @@ const Banner = (props) => {
     } = props
 
     // Initial location of URL
-    const location = useLocation()
+    // let location = useLocation()
 
     // Figure out the banner
     const getBanner = () => {
-        switch(location.pathname) {
+        switch(window.location.pathname) {
             case '/suicidesquad':
                 return 'suicidesquad'
             case '/darkknight':
@@ -53,7 +53,7 @@ const Banner = (props) => {
                     <ul className="sci">
                         <li>
                             <a href={`http://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
-                                target="_blank">
+                            target="_blank">
                                 <img src={Facebook} alt="facebook"/>
                             </a>
                         </li>
