@@ -2,7 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { useLocation } from 'react-router-dom'
 // Custom Images
 import FavIcon from '../../images/favicon.ico'
 import Logo from '../../images/logo.png'
@@ -11,8 +10,6 @@ import ToggleBtn from '../../images/toggle.png'
 const Header = (props) => {
     // Props
     const { menuToggle, setMenuToggle } = props
-    // Initial location of URL
-    const location = useLocation()
     // Get title for the tab
     const getTitle = () => {
         switch(window.location.pathname) {
