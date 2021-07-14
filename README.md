@@ -31,3 +31,10 @@ Option 3: This is for running the main app only
 ```
 npm run start || yarn start
 ```
+
+## Running The Test
+
+Please run the following:
+```
+npm run test || yarn test
+```
