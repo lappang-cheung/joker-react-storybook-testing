@@ -13,7 +13,7 @@ Please run the following:
 npm install || yarn install
 ```
 
-## Running The Applcation
+## Running The Application
 
 Please run the following:
 
