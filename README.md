@@ -5,6 +5,18 @@ This is a simple movie trailer featuring the famous villian the Joker and this a
 - Unit Testing
 - React-Router-Dom
 
+## Prequiste
+Install NodeJS - https://nodejs.org/en/download/current/
+
+## Cloning
+In order to clone the repo, go to command console and locate the directory you to copy to.
+
+Example:
+```
+cd Desktop
+git clone https://github.com/lappang-cheung/joker-react-storybook-testing.git
+```
+
 ## Installation
 
 Please run the following:
