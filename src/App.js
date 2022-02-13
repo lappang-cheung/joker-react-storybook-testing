@@ -1,7 +1,7 @@
 // Required Packages
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from 'react-router-dom'
 // Custom Pages
@@ -16,13 +16,13 @@ import './styles/style.scss';
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path='/suicidesquad'component={SuicideSquad} />
-        <Route exact path='/darkknight'component={Darkknight} />
-        <Route exact path='/timburton' component={TimBurton} />
-        <Route exact path='/' component={Joker} />
-        <Route component={ErrorPage} />
-      </Switch>
+      <Routes>
+        <Route exact path='/suicidesquad'element={<SuicideSquad/>} />
+        <Route exact path='/darkknight'element={<Darkknight/>} />
+        <Route exact path='/timburton' element={<TimBurton/>} />
+        <Route exact path='/' element={<Joker/>} />
+        <Route element={<ErrorPage/>} />
+      </Routes>
     </Router>
   );
 }

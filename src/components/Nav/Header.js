@@ -29,7 +29,7 @@ const Header = (props) => {
                 <link rel="icon" href={FavIcon} />
                 <title>{getTitle()}</title>
             </Helmet>
-            <a href="#" className="logo">
+            <a href={window.location.pathname} className="logo">
                 <img src={Logo} 
                     alt="logo" 
                 />
